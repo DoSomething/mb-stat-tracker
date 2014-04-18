@@ -4,6 +4,8 @@
  * Basic wrapper of the StatHat API library.
  */
 
+namespace DoSomething\MBStatTracker;
+
 // Load StatHat php library from: https://www.stathat.com/manual/code/php
 include 'lib/stathat.php';
 
@@ -26,7 +28,7 @@ class StatHat {
    * @param string $_prefix
    *   The prefix for stat names.
    */
-  public StatHat($_ezkey, $_prefix) {
+  public function __construct($_ezkey, $_prefix) {
     if (empty($_ezkey)) {
       throw new Exception('No EZ key provided.');
     }
