@@ -1,0 +1,19 @@
+{
+    "name": "dosomething/mb-stat-tracker",
+    "type": "library",
+    "version": "0.0.1",
+    "description": "This library offers an interface for DoSomething.org message broker producers and consumers to report stats.",
+    "homepage": "https://github.com/DoSomething/mb-stat-tracker",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "DoSomething.org",
+            "homepage": "http://www.dosomething.org"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "StatHat\\": "StatHat/"
+        }
+    }
+}
