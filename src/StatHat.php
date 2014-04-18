@@ -36,10 +36,10 @@ class StatHat {
       throw new Exception('No prefix provided.');
     }
 
-    $ezkey = $_ezkey;
+    $this->ezkey = $_ezkey;
 
     // The ~ character allows for posting to multiple stats with one call.
-    $prefix = $_prefix . '~';
+    $this->prefix = $_prefix . '~';
   }
 
   /**
@@ -50,7 +50,7 @@ class StatHat {
    */
   public function addStatName($name) {
     // Stat names are comma-delimited.
-    $statNames .= $name . ',';
+    $this->statNames .= $name . ',';
   }
 
   /**
