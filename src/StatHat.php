@@ -20,6 +20,9 @@ class StatHat {
   // Comma-delimited stat names to report to.
   private $statNames;
 
+  // Flag determining whether this is in production user or not. Defaults to FALSE.
+  private $isProduction;
+
   /**
    * StatHat constructor.
    *
@@ -40,6 +43,19 @@ class StatHat {
 
     // The ~ character allows for posting to multiple stats with one call.
     $this->prefix = $_prefix . '~';
+
+    // Default production flag to FALSE.
+    $this->isProduction = FALSE;
+  }
+
+  /**
+   * Sets the $isProduction flag.
+   *
+   * @param boolean $_isProduction
+   *   The value to set the flag to.
+   */
+  public function setIsProduction($_isProduction) {
+    $this->isProduction = $_isProduction;
   }
 
   /**
@@ -61,7 +77,9 @@ class StatHat {
    */
   public function reportCount($count) {
     $statName = $this->prefix . $this->statNames;
-    stathat_ez_count($this->ezkey, $statName, $count);
+    if ($this->isProduction) {
+      stathat_ez_count($this->ezkey, $statName, $count);
+    }
   }
 
   /**
@@ -72,6 +90,8 @@ class StatHat {
    */
   public function reportValue($value) {
     $statName = $this->prefix . $this->statNames;
-    stathat_ez_value($this->ezkey, $statName, $value);
+    if ($this->isProduction) {
+      stathat_ez_value($this->ezkey, $statName, $value);
+    }
   }
 }
