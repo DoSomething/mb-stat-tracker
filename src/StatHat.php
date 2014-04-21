@@ -5,6 +5,7 @@
  */
 
 namespace DoSomething\MBStatTracker;
+use Exception;
 
 // Load StatHat php library from: https://www.stathat.com/manual/code/php
 include 'lib/stathat.php';
