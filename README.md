@@ -38,12 +38,14 @@ $statHat->addStatName('stat name 3');
 ```
 
 #### Report the Stats
-Add `$count` to the value of a stat name:
+Only one of the following should be used for each stat name:
+
+* Add `$count` to the value of a stat name:
 ```
 $statHat->reportCount($count);
 ```
 
-Add `$value` to a stat name and recalculate its average:
+* Add `$value` to a stat name. StatHat will calculate the average:
 ```
 $statHat->reportValue($value);
 ```
