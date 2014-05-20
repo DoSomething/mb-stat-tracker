@@ -1,7 +1,7 @@
 {
     "name": "dosomething/mb-stat-tracker",
     "type": "library",
-    "version": "v0.0.2",
+    "version": "v0.0.3",
     "description": "This library offers an interface for DoSomething.org message broker producers and consumers to report stats.",
     "homepage": "https://github.com/DoSomething/mb-stat-tracker",
     "license": "MIT",

@@ -71,6 +71,13 @@ class StatHat {
   }
 
   /**
+   * Removes any stat names added to this object.
+   */
+  public function clearAddedStatNames() {
+    $this->statNames = '';
+  }
+
+  /**
    * Reports a count to the StatHat API.
    *
    * @param int $count
