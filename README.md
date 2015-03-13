@@ -68,3 +68,6 @@ $sh2->reportValue(1);
 
 ## StatHat - Checking Reports
 After logging into the StatHat account, reported stats can be viewed here: https://www.stathat.com/v/stats
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/DoSomething/mb-stat-tracker/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
